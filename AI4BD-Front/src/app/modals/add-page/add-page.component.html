@@ -1,0 +1,39 @@
+<p-dialog header="Add a page"
+          [(visible)]="display"
+          [modal]="true"
+          [maximizable]="true"
+          [style]="{width: '30vw'}"
+          styleClass="modal-default visible"
+          [baseZIndex]="10000">
+  <form>
+    <div class="form-group p-grid no-padding">
+      <label class="form-control p-col-3" for="text">
+        Text
+      </label>
+      <div class="p-col-8 no-padding">
+        <div class="p-col-8 no-padding">
+          <textarea [(ngModel)]="page.text"
+                    id="text"
+                    name="text"
+                    rows="5"
+                    cols="30"
+                    pInputTextarea></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+  <p-footer>
+    <button (click)="display=false"
+            class="gray-btn"
+            label="Cancel"
+            pButton
+            type="button">
+    </button>
+    <button (click)="addPage()"
+            class="blue-btn"
+            label="Save"
+            pButton
+            type="button">
+    </button>
+  </p-footer>
+</p-dialog>

@@ -1,0 +1,7 @@
+div > h1 {
+  text-align: center;
+}
+
+::ng-deep .p-card {
+  margin: 30px;
+}
