@@ -21,11 +21,13 @@ export class Document {
   }
 
   constructor(document?: Document, page?: Page) {
-    this._id = document._id;
-    this.title = document.title;
-    this.author = document.author;
-    this.dateCreated = document.dateCreated;
-    this.pages = JSON.parse(JSON.stringify(document.pages));
-    this.pages.push(page);
+    if (document) {
+      this._id = document._id;
+      this.title = document.title;
+      this.author = document.author;
+      this.dateCreated = document.dateCreated;
+      this.pages = JSON.parse(JSON.stringify(document.pages));
+      this.pages.push(page);
+    }
   }
 }

@@ -1,7 +1,7 @@
 <div>
   <h3>{{document?.title}}</h3>
   <p *ngIf="document?.author">Author: {{document.author}}</p>
-  <p *ngIf="document?.dateCreated">Creation date: {{document.dateCreated | date:'MM/dd/yyyy'}}</p>
+  <p *ngIf="document?.dateCreated">Creation date: {{document.dateCreated}}</p>
    <ng-container *ngFor="let page of document?.pages; let i = index">
      <button
      pButton
